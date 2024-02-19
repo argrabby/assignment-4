@@ -7,3 +7,7 @@
     background-color: #1DD100;
     color: white;
 }
+
+.bottom-shadow {
+    box-shadow: 0px 8px 8px rgba(17, 122, 1, 0.3); 
+}
