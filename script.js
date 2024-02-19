@@ -45,7 +45,7 @@ for (let card of Cards) {
 
 // Function to apply coupon
 function applyCoupon() {
-    let disInput = document.getElementById('coupne-input');
+    let disInput = document.getElementById('coupon-input');
     let disInputValue = disInput.value;
     if (disInputValue === "NEW15" || disInputValue === "NEW20") {
         let AmountPlace = document.getElementById('Total-Amount');
@@ -66,7 +66,7 @@ function applyCoupon() {
         disInput.value = "";
     }
     // Increment counter for coupon usage
-    CopneCount++;
+    couponCount++;
     // Increment counter for applying coupon
     seatAccessCount++;
 }
