@@ -4,172 +4,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P-Ticket</title>
+    <title>Green Line Paribahan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style.css">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/bus-icon.png">
 </head>
 
-<body class="font-manrope m-0 font-segoe-ui overflow-x-hidden max-w-screen-xl mx-auto">
+<body>
+    <div id="hidden">
 
-    <navbar>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <header class="header">
+            <!-- Navigation Section -->
+            <section>
+                <div class="navbar bg-base-100">
+                    <!-- Mobile Navbar Toggle -->
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Home</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Destination</a></li>
+                                <li><a>Search</a></li>
+                            </ul>
+                        </div>
+                        <a class="font-extrabold text-2xl">Green Line</a>
                     </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Destination</a></li>
-                        <li><a>Search</a></li>
-                    </ul>
+
+                    <!-- Desktop Navigation -->
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 font-semibold">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Options -->
+                    <div class="navbar-end">
+                        <a class="btn bg-green-100 text-green-500 font-bold"> Bus <img src="./images/bus-icon.png"
+                                alt=""></a>
+                    </div>
                 </div>
-                <a class="font-extrabold text-2xl">P-Ticket</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Destination</a></li>
-                    <li><a>Search</a></li>
-                </ul>
-            </div>
-            <div class="navbar-end">
-                <a class="btn bg-green-500 bg-opacity-20 text-primary">Bus <img src="./images/bus-icon.png" alt=""></a>
-            </div>
+            </section>
 
-        </div>
-    </navbar>
-
-    <!-- banner Section -->
-    <div class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
-        style="background-image: url('./images/banner.png'); height: 600px">
-
-        <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed">
-            <div class="flex h-full items-center justify-center">
-                <div class="container mx-auto py-20 flex flex-col items-center justify-center">
-                    <h1 class="text-6xl font-bold text-white text-center mb-10">
-                        End-to-End Travel with
-                        <br>
-                        <span class="text-6xl font-bold text-primary">P Paribahan</span>
-                    </h1>
-                    <p class="text-center text-xl text-white mb-10">
-                        Yes, you can run unit tests and view the results directly within the app.
-                        <br> The integrated testing features allow for a streamlined.
-                    </p>
-                    <button class="hover:bg-primary text-white font-bold py-2 px-4 rounded-md btn-primary text-xl">Buy
-                        Tickets</button>
+            <!-- Banner Section -->
+            <section class="banner">
+                <div class="banner-image h-[550px] flex justify-center rounded-xl items-center">
+                    <div class="text-white">
+                        <h2 class="text-5xl font-bold">End-to-End Travel with</h2>
+                        <h2 class="text-5xl mt-5 font-bold text-green-500 text-center">GreenLine Paribahan</h2>
+                        <div class="w-full mt-10 text-center">
+                            <p>Yes, you can run unit tests
+                                and view the results directly within the app.The <br> integrated testing features allow
+                                for
+                                a
+                                streamlined .</p>
+                            <button class="btn bg-green-500 border-none font-bold mt-10"> <a href="#buyeSection">Buy
+                                    Tickets</a></button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <!-- Cards Section -->
+                <div class="flex gap-6 relative mt-[-50px] justify-center">
+                    <!-- Card 1 -->
+                    <div class="card border-5px w-80 bg-base-100 border-4  border-b-green-400  ">
+                        <div class="card-body">
+                            <div class="flex gap-11">
+                                <div>
+                                    <img src="././images/people.png" alt="people">
+                                </div>
+                                <div>
+                                    <h2 class="font-bold text-3xl">500K+</h2>
+                                    <p class="font-semibold mt-3">Registered users</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card border-5px w-80 bg-base-100 border-4  border-b-green-400  ">
+                        <div class="card-body">
+                            <div class="flex gap-11">
+                                <div>
+                                    <img src="././images/ticket-cupon.png" alt="people">
+                                </div>
+                                <div>
+                                    <h2 class="font-bold text-3xl"> 1.7 lacks</h2>
+                                    <p class="font-semibold mt-3"> Tickets sold</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card border-5px w-80 bg-base-100 border-4  border-b-green-400  ">
+                        <div class="card-body">
+                            <div class="flex gap-11">
+                                <div>
+                                    <img src="././images/stoppage.png" alt="people">
+                                </div>
+                                <div>
+                                    <h2 class="font-bold text-3xl">80K+</h2>
+                                    <p class="font-semibold mt-3">Rental partners</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
 
+
+
+        <main class="main-div mt-20">
+            <h2 class="text-center font-bold text-2xl">Best offer for You</h2>
+            <!-- Section Offer -->
+            <section class="mt-10">
+                <div class="flex gap-5">
+                    <!-- Card 1: 15% OFF -->
+                    <div class="card h-48 w-1/2 p-0 bg-base-100 shadow-xl bg-amber-500">
+                        <div class="card-body p-0">
+                            <div class="flex gap-4">
+                                <div class="px-10 pb-5 mt-2">
+                                    <h2 class="font-bold text-5xl pt-5">15% OFF</h2>
+                                    <h1 class="text-xl font-bold pt-4 ">on your next purchase </h1>
+                                    <h1 class="text-xl font-bold pt-3 text-slate-100">Use by January 2024 </h1>
+                                </div>
+                                <div class="h-40">
+                                    <img class="h-48 p-0 m-0" src="./images/cupon-devider.png" alt="">
+                                </div>
+                                <div class="pt-16 px-1">
+                                    <h2 class="text-3xl font-bold">NEW15</h2>
+                                    <h1 class="text-xl font-semibold">Coupon Code</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2: 20% OFF -->
+                    <div class="card h-48 w-1/2 p-0 bg-base-100 shadow-xl bg-red-400">
+                        <div class="card-body p-0">
+                            <div class="flex gap-4">
+                                <div class="px-10 pb-5 mt-2">
+                                    <h2 class="font-bold text-5xl pt-5">20% OFF</h2>
+                                    <h1 class="text-xl font-bold pt-4 ">on your next purchase </h1>
+                                    <h1 class="text-xl font-bold pt-3 text-slate-100">Use by January 2024 </h1>
+                                </div>
+                                <div class="h-40">
+                                    <img class="h-48 p-0 m-0" src="./images/cupon-devider.png" alt="">
+                                </div>
+                                <div class="pt-16 px-1">
+                                    <h2 class="text-3xl font-bold">NEW20</h2>
+                                    <h1 class="text-xl font-semibold">Coupon Code</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button to see all offers -->
+                <div class="text-center mt-16">
+                    <button class="btn btn-outline text-green-400">See All Offers</button>
+                </div>
+            </section>
+
+            <div class="border-2 rounded-2xl border-t-green-500  mt-20">
+                <section class="mt-20">
+                    <h2 class="text-center text-4xl font-bold">GreenLine Pharibahon</h2>
+                    <p class="text-center pt-3  font-semibold">Yes, you can run unit tests and view the results directly
+                        within
+                        the app. The <br> integrated testing features allow for a streamlined .</p>
+                    <div class="card h-[393px] w-full p-0 bg-base-100 shadow-xl mt-20 pt-2 ">
+                        <div class="card-body p-0">
+                            <div class="flex gap-4">
+                                <div class="px-10 pb-5 mt-2">
+                                    <div class="flex gap-28 justify-center items-center">
+                                        <div class="flex gap-2">
+                                            <div><img class="w-14" src="./images/bus-icon.png" alt=""></div>
+                                            <div>
+                                                <h2 class="text-4xl font-bold">GreenLine Pharibahon</h2>
+                                                <p class="font-semibold text-stone-400">Coach-009-WEB ! AC_Business</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn text-green-400 bg-green-200"><img
+                                                    src="./images/seat-green.png" alt=""> <span
+                                                    id="totalSetCount">28</span> Seats left</button>
+                                        </div>
+                                    </div>
+                                    <div class="card w-full bg-gray-50 mt-6">
+                                        <div class="card-body">
+                                            <div>
+                                                <div class="flex gap-96 justify-between py-3">
+                                                    <p>Route</p>
+                                                    <p>Dhaka-Sylhet</p>
+                                                </div>
+                                                <hr>
+                                                <div class="flex gap-96 justify-between py-3">
+                                                    <p>Departure Time</p>
+                                                    <p>9:00 PM</p>
+                                                </div>
+                                                <hr>
+                                                <div class="py-5 mt-3">
+                                                    <button class="btn">Boarding Point - Laxmipur</button>
+                                                    <button class="btn">Dropping Point - Bogura</button>
+                                                    <button class="btn">Est. Time - 11 Hour</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-96">
+                                    <img class="h-96 p-0 m-0" src="./images/info-devider.png" alt="">
+                                </div>
+                                <div class="pt-16 px-1">
+                                    <div class="pt-16 pl-10 text-center">
+                                        <h2 class="text-3xl text-center font-bold flex justify-center items-center"><img
+                                                src="./images/fare.png" alt=""></h2>
+                                        <h1 class="text-xl font-semibold justify-center items-center"><span>550</span>
+                                            TAKA
+                                        </h1>
+                                        <span class="text-center font-bold">Per Seat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Set Selection  -->
+                <section id="buyeSection" class="mt-20 ">
+                    <div class="card w-full bg-base-100 shadow-xl ">
+                        <div class="flex gap-10">
+                            <div class="p-10">
+                                <div>
+                                    <div class="flex gap-52 mb-6">
+                                        <h1 class="text-xl font-bold ">Select Your Seat</h1>
+                                    </div>
+                                    <hr>
+                                    <div class="flex gap-52 py-4">
+                                        <span class="flex"><img class="text-[10px]" src="./images/seat-gray.png" alt="">
+                                            <span class="pl-3">Available</span></span>
+                                        <span class="text-green-600 flex"><img class="pr-3"
+                                                src="./images/seat-green-filled.png" alt=""> Selected</span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="py-5">
+                                    <div class="float-right">
+                                        <div
+                                            class="w-20 bg-slate-300 p-6 flex justify-center items-center rounded-lg  ">
+                                            <span><svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M13 25C11.4241 25 9.86371 24.6896 8.4078 24.0866C6.95189 23.4835 5.62902 22.5996 4.51472 21.4853C3.40042 20.371 2.5165 19.0481 1.91345 17.5922C1.31039 16.1363 1 14.5759 1 13C1 11.4241 1.31039 9.86371 1.91345 8.4078C2.5165 6.95189 3.40042 5.62902 4.51472 4.51472C5.62902 3.40042 6.95189 2.5165 8.4078 1.91345C9.86371 1.31039 11.4241 1 13 1C14.5759 1 16.1363 1.31039 17.5922 1.91345C19.0481 2.5165 20.371 3.40042 21.4853 4.51472C22.5996 5.62902 23.4835 6.95189 24.0866 8.4078C24.6896 9.86371 25 11.4241 25 13C25 14.5759 24.6896 16.1363 24.0866 17.5922C23.4835 19.0481 22.5996 20.371 21.4853 21.4853C20.371 22.5996 19.0481 23.4835 17.5922 24.0866C16.1363 24.6896 14.5759 25 13 25ZM13 25V15.6667M10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1144 14.8856C11.6145 15.3857 12.2928 15.6667 13 15.6667M10.3333 13C10.3333 12.2928 10.6143 11.6145 11.1144 11.1144C11.6145 10.6143 12.2928 10.3333 13 10.3333C13.7072 10.3333 14.3855 10.6143 14.8856 11.1144C15.3857 11.6145 15.6667 12.2928 15.6667 13M10.3333 13L1.33333 10.3333M13 15.6667C13.7072 15.6667 14.3855 15.3857 14.8856 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13M15.6667 13L24.6667 10.3333"
+                                                        stroke="#030712" stroke-opacity="0.7" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex pt-20 gap-1 ">
+                                    <div class="grid grid-cols-1 gap-10">
+                                        <div class="w-20  p-6 flex justify-center items-center rounded-lg">
+                                            <span>A</span>
+                                        </div>
+                                        <div class="  w-20   p-6 flex justify-center items-center rounded-lg">
+                                            <span>B</span>
+                                        </div>
+                                        <div class=" w-20   p-6 flex justify-center items-center rounded-lg">
+                                            <span>C</span>
+                                        </div>
+                                        <div class=" w-20   p-6 flex justify-center items-center rounded-lg">
+                                            <span>D</span>
+                                        </div>
+                                        <div class=" w-20   p-6 flex justify-center items-center rounded-lg">
+                                            <span>E</span>
+                                        </div>
+                                        <div class=" w-20   p-6 flex justify-center items-center rounded-lg">
+                                            <span>F</span>
+                                        </div>
+                                        <div class=" w-20    p-6 flex justify-center items-center rounded-lg">
+                                            <span>G</span>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 gap-10">
+                                        <div class="space-y-10">
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg ">
+                                                <h1>A1</h1>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>B1</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>C1</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg ">
+                                                <span>D1</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>E1</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>F1</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>G1</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="space-y-10">
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>A2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>B2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>C2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>D2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>E2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>F2</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>G2</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-10">
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>A3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>B3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>C3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>D3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>E3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>F3</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>G3</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-10">
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>A4</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>B4</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>C4</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>D4</span>
+                                            </div>
+                                            <div id="card"
+                                                class="w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>E4</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>F4</span>
+                                            </div>
+                                            <div id="card"
+                                                class=" w-20 bg-slate-50 p-6 flex justify-center items-center rounded-lg">
+                                                <span>G4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- select section2 -->
+                            <div class="h-[500px] flex-col">
+                                <hr class=" h-[950px] mt-20" style="border: 1px dashed darkseagreen;">
+                            </div>
+                            <div class="mt-10">
+                                <h1 class="text-xl font-bold mb-6">Select Your Seat</h1>
+                                <hr>
+                                <div class="card w-full bg-base-100">
+                                    <div class="card-body">
+                                        <div class="overflow-x-auto">
+                                            <table class="table bg-slate-100">
+                                                <!-- Table head -->
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-[15px]">Seat <span id="seat-Count"
+                                                                class="badge text-green-400 badge-sm text-xl bg-slate-100 indicator-item">0</span>
+                                                        </th>
+                                                        <th class="text-[15px]">Class</th>
+                                                        <th class="text-[15px]">Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="table-body">
+                                                    <!-- Table rows -->
+                                                    <tr>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <hr>
+                                            <div class="space-x-28">
+                                                <table class="table">
+                                                    <!-- Table body -->
+                                                    <tbody id="table-body2">
+                                                        <tr>
+                                                            <th class="text-[15px]">Total Amount</th>
+                                                            <th></th>
+                                                            <th class="text-[15px]">BDT <span id="amount-first"></span>
+                                                            </th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="mt-10">
+                                                <!-- Coupon input and apply button -->
+                                                <input id="coupne-input" type="text" class="p-3 bg-slate-100"
+                                                    placeholder=" Have any coupon?" />
+                                                <button onclick="applyCoupon()" id="discount-btn"
+                                                    class="btn bg-green-400 disabled">Apply</button>
+                                                <!-- Grand total -->
+                                                <div class="mt-10 flex justify-between font-bold">
+                                                    <span>Grand Total</span>
+                                                    <span>BDT <span id="Total-Amount"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Passenger information -->
+                                    <div class="mt-10">
+                                        <h1 class="text-xl font-semibold py-3">Passenger Name</h1>
+                                        <label class="input input-bordered flex items-center gap-2">
+                                            <input id="passenger-Name" type="text" class="grow"
+                                                placeholder="Passenger Name" />
+                                        </label>
+
+                                        <h1 class="text-xl font-semibold py-3">Email Address</h1>
+                                        <label class="input input-bordered flex items-center gap-2">
+                                            <input id="passengerEmail" type="text" class="grow"
+                                                placeholder="Email Address" />
+                                        </label>
+
+                                        <h1 class="text-xl font-semibold py-3">Phone Number</h1>
+                                        <label class="input input-bordered flex items-center gap-2">
+                                            <input id="passenger-Phone" type="text" class="grow"
+                                                placeholder="Phone Number" />
+                                        </label>
+
+                                        <!-- Next button -->
+                                        <button onclick="success()" id="purchase-btn"
+                                            class="btn w-full bg-green-400 mt-10 text-white font-bold">Next</button>
+
+                                        <!-- Terms and Conditions -->
+                                        <div class="flex gap-10 mt-10">
+                                            <span class="underline underline-offset-1">Terms And Condition</span>
+                                            <span class="underline underline-offset-1">Cancellation Policy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
     </div>
-
-    <!-- info section -->
-    <section style="margin-top: -62px;">
-        <div class="flex space-x-4 items-center justify-center">
-            <div>
-                <div class="card card-side bg-base-100 shadow-xl w-80 p-2 border-4  border-b-green-400">
-                    <figure><img src="./images/people.png" alt="Movie" /></figure>
-                    <div class="card-body text-left">
-                        <h2 class="card-title text-4xl font-bold">500K+</h2>
-                        <p>Register User</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card card-side bg-base-100 shadow-xl w-80 p-2 border-4  border-b-green-400">
-                    <figure><img src="./images/ticket-cupon.png" alt="Movie" /></figure>
-                    <div class="card-body text-left">
-                        <h2 class="card-title text-4xl font-bold">1.7 lakh</h2>
-                        <p>Ticket Sold</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="card card-side bg-base-100 shadow-xl w-80 p-2 border-4  border-b-green-400">
-                    <figure><img src="./images/stoppage.png" alt="Movie" /></figure>
-                    <div class="card-body text-left">
-                        <h2 class="card-title text-4xl font-bold">80K+</h2>
-                        <p>Rental partners</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
-    
-
-
-
-
-    <!-- offer Section -->
-
-    <section class="mt-20">
-        <div class="flex row justify-center space-x-4">
-            <!-- Applied justify-center class to center the row horizontally -->
-            <div class="flex">
-                <div class="card card-side bg-base-100 shadow-xl w-15 p-2"
-                    style="background-color: #FFBF0F; height: 220px;">
-                    <div>
-                        <span class="card-title text-4xl font-bold">15% OFF</span>
-                        <br>
-                        <b> on your next purchase</b>
-                        <br>
-                        use by January 2024
+    </div>
+    </main>
+    </div>
+    <!-- Success Modal -->
+    <section id="Success-section" class="success-card hidden mt-20">
+        <div class="flex justify-center">
+            <div id="Success-Card" class="card w-[600px] bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <!-- Success Image -->
+                    <div class="card-actions justify-center">
+                        <img src="./images/success.png" alt=""><br>
                     </div>
-                    <img src="./images/cupon-devider.png" alt="">
-                    <div>
-                        NEW15
-                        Coupon Code
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="text-center">
-                <div class="card card-side bg-base-100 shadow-xl w-15 p-2"
-                    style="background-color: #FFBF0F; height: 220px;">
-                    <div>
-                        <span class="card-title text-4xl font-bold">15% OFF</span>
-                        <br>
-                        <b> on your next purchase</b>
-                        <br>
-                        use by January 2024
-                    </div>
-                    <img src="./images/cupon-devider.png" alt="">
-                    <div>
-                        NEW15
-                        Coupon Code
-                    </div>
+                    <!-- Success Message -->
+                    <div class="text-center"><span>Success</span></div>
+                    <p class="font-semibold px-5">Thank you for Booking Our Bus Seats. We are working hard to find the
+                        best service </p>
+                    <h2 class="px-5"> Shortly you will find a confirmation in your email.</h2>
+                    <!-- Continue Button -->
+                    <button onclick="Countinue()" class="btn bg-green-500 text-white"> Continue</button>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <footer class="footer-section mt-24">
+        <div class="p-10 bg-neutral text-neutral-content">
+            <div class="flex justify-around mb-5">
+                <div>
+                    <aside>
+                        <h2 class="text-4xl font-bold">GreenLine Pharibahon</h2>
+                        <p>GreenLine Paribahan is a digital platform to make your daily commuting better.</p>
+                    </aside>
+                </div>
+                <div>
+                    <nav>
+                        <h6 class="footer-title">Download our app</h6>
+                        <div class="grid grid-flow-col gap-4">
+                            <button class="btn"><img src="./images/playstore.png" alt=""> Download</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
 
-
-    <section class="mt-20">
-        <div class="text-center">
-            <button class="btn btn-outline text-green-500">See All Offers</button>
-        </div>
-    </section>
-
-    <section class="mt-10">
-        <div class="card card-side bg-base-100 shadow-xl w-full p-2 border-4  border-t-green-400">
-            <div class="text-center text-4xl font-bold">
-                <h1 class="text-center">P.H Paribahan</span>
+            <div style="border: 1px dashed darkslategray;"></div>
+            <div class="flex justify-around mt-5">
+                <div>
+                    <h2>@ 2024 All rights reserved, GreenLine Pharibahon services limited.</h2>
+                </div>
+                <div class="flex gap-5">
+                    <!-- Footer Links -->
+                    <p>Terms & condition</p>
+                    <p>Return & refund policy</p>
+                    <p>Privacy policy</p>
+                </div>
             </div>
         </div>
-    </section>
-    
+    </footer>
 
+
+
+
+    <script src="utiliy.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

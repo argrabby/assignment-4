@@ -1,13 +1,14 @@
-.text-primary{
-    color: #1DD100;
+body .fotter, .header, .main-div, .success-card{
+    width: 1140px;
+    margin: auto;
+}
+
+.banner-image {
+    background-image: url('./images/banner.png');
 }
 
 
 .btn-primary{
     background-color: #1DD100;
     color: white;
-}
-
-.bottom-shadow {
-    box-shadow: 0px 8px 8px rgba(17, 122, 1, 0.3); 
 }
